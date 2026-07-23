@@ -1,16 +1,27 @@
 {
   "name": "intro-express-js-johan-prato",
   "version": "1.0.0",
-  "description": "",
+  "description": "introduccion express",
+  "keywords": [],
+  "homepage": "https://github.com/johanspc07-glitch/intro_express_3407184_johan_prato#readme",
+  "bugs": {
+    "url": "https://github.com/johanspc07-glitch/intro_express_3407184_johan_prato/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanspc07-glitch/intro_express_3407184_johan_prato.git"
+  },
+  "license": "ISC",
+  "author": "prato cuesta",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev": "node --watch app.js",
+    "prodution": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
   }
 }
