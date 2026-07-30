@@ -2,6 +2,7 @@ import express from 'express';
 import {configDotenv} from 'dotenv';
 configDotenv();
 import bodyParser from "body-parser";
+import cors from "cors"
 
 const app = express();
 const port = process.env.PORT || 3030;
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3030;
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
 
+app.use(cors());
 app.get("/", (_, res) => {
     res.send("Hola, estamos aprendiendo Express con la ficha 3407184");
 });
@@ -33,6 +35,10 @@ app.get("/productos/:nombre", (req, res)=>{
         categoria: "electrodomestico"
     };
     res.json(producto)
+})
+
+app.get("/aprendices", (req, res) => {
+    res.json({"nombre", })
 })
 app.get("/saludo/:nombre", (req, res)=>{
     const saludo = req.params.nombre;
